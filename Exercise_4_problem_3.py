@@ -65,6 +65,21 @@ temp_data =  [19, 21, 21, 21, 23, 23, 23, 21, 19, 21, 19, 21, 23, 27, 27, 28, 30
 
 
 # YOUR CODE HERE
+# Import the two functions from 'temp_functions.py'
+import temp_functions
+
+# Create an empty list to store temperature class
+temp_classes = []
+
+# Convert the each Fahrenheit temperature in the temp_data list into Celsius and classify the Celsius temperatures
+for i in range(len(temp_data)):
+  # Create temp_celsius with the temperature in Celsius 
+  temp_celsius = temp_functions.fahr_to_celsius(temp_data[i])
+  # Create temp_class with the temperature class number 
+  temp_class = temp_functions.temp_classifier(temp_celsius)
+  # Append the class to the temp_classes
+  temp_classes.append(temp_class)
+
 
 # #### Part 2 (continues)
 # 
@@ -75,6 +90,20 @@ temp_data =  [19, 21, 21, 21, 23, 23, 23, 21, 19, 21, 19, 21, 23, 27, 27, 28, 30
 #   
 
 # YOUR CODE HERE
+# Create zeros
+zeros = 0
+# Create ones
+ones = 0
+# Create twos
+twos = 0
+# Create threes
+threes = 0
+
+zeros = temp_classes.count(0)
+ones = temp_classes.count(1)
+twos = temp_classes.count(2)
+threes = temp_classes.count(3)
+
 
 # **TIP**: You might want to consider using a [**count()** function](https://www.tutorialspoint.com/python3/list_count.htm) OR a for loop for this.
 
@@ -96,8 +125,8 @@ print(zeros,ones,twos,threes)
 # - If you have any comments and concerns at this point, you can write them below:
 
 # YOUR ANSWER HERE. Write your answer as comments (with #)
-#
-#
+# - I have commented
+# - I am alright!
 #
 #
 #

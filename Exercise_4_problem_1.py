@@ -19,6 +19,25 @@
 # - Adding comments in your code and a docstring that explains how to use your `fahr_to_celsius` function (i.e., you should write the purpose of the function, parameters, and returned values)
 
 # YOUR CODE HERE
+# Define a function of fahrenheit to celsius
+def fahr_to_celsius(temp_fahrenheit):
+  """
+  Function for converting temperature in Fahrenheit to Celsius.
+
+  Parameters
+  ----------
+  temp_fahrenheit: <numerical>
+      Temperature in Fahrenheit
+
+  Returns
+  -------
+  <float>
+      Converted temperature in Celsius.
+  """
+  # Calculate converted temperature from temp_fahrenheit
+  converted_temp = (temp_fahrenheit - 32) / 1.8
+  # Return the result
+  return converted_temp
 
 # ### Problem 1 tests
 # 
@@ -27,6 +46,7 @@
 # 2. What about 71° Fahrenheit in Celsius?
 
 # ### Check your code
+print("32 degrees Fahrenheit in Celsius is:", fahr_to_celsius(32))
 # 
 # - Make sure you used the given variable names
 # - Check that you have added necessary comments to your code
@@ -42,8 +62,8 @@
 # Write your answers below:
 
 # YOUR ANSWER HERE. Write your answers as comments
-#
-#
+# 1. It was clear.
+# 2. First, we can avoid to write same codes many times. It also means when an error is happened, we just need to change one place of the function. Second, by grouping each function, the code becomes shorter and easy to read.
 #
 #
 

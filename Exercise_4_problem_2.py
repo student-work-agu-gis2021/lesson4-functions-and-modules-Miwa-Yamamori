@@ -25,17 +25,46 @@
 
 
 # YOUR CODE HERE to define temp_classifier
+# Define a function which returns the class value
+def temp_classifier(temp_celsius):
+  """
+  Function for classifying temperature.
+
+  Parameters
+  ----------
+  temp_celsius: <numerical>
+      Temperature in Celsius.
+
+  Returns
+  -------
+  <int>
+      The class number.
+  """
+  # When the temperature is lower than -2.0, classify to 0.
+  # Temp_celsius may be float type, so we use -2.0 but -2
+  if(temp_celsius < -2.0):
+    return 0
+  # When it is equal or warmer than -2.0 and less than 2.0, classify to 1.
+  elif(-2.0 <= temp_celsius and temp_celsius < 2.0):
+    return 1
+  # When it is equal or warmer than 2.0 and less than 15.0, classify to 2.
+  elif(2.0 <= temp_celsius and temp_celsius < 15.0):
+    return 2
+  # Other case (It is equal or warmer than 15.0), classify to 3.
+  else:
+    return 3
 
 # Use your newly created function to print the answers to the following questions:
 
-
 # 1. What is the class value for 16.5 degrees Celsius?
 # YOUR CODE HERE
-#
+# Use the function with the argument, 16.5, and print
+print("Class value for 16.5 degrees Celsius is:", temp_classifier(16.5))
+
 # 2. What is the class value for +2 degrees Celsius?
 # YOUR CODE HERE
-#
-
+# Use the function with the argument, +2, and print
+print("Class value for +2 degrees Celsius is:", temp_classifier(+2))
 
 # ### Problem 2 tests
 # 
@@ -66,9 +95,9 @@ print("ok :)")
 #  - Does your function has an informative dosctring?
 
 # YOUR ANSWER HERE. Write your answer as comments
-#
-#
-#
+# - Yes.
+# - Yes.
+# - Yes.
 #
 #
 # YOUR ANSWER ENDS HERE
